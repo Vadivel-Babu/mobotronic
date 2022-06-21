@@ -1,0 +1,294 @@
+.all-mobiles{
+    display:flex;
+    flex-direction: column;
+    
+    min-height: 60vh;
+    .nav-head{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        width: 100%;
+        h1{
+            font-size: 4rem;
+            color: $color-primary;
+            text-transform: capitalize;
+        }
+        button{
+            
+            padding: 1rem;
+            font-size: 2rem;
+            border: 0;
+            margin-right: 2rem;
+            font-weight: 600;
+            border-radius: 0.5rem;
+            &.home{
+                background-color: $color-primary;
+                color: $color-white;
+            }
+        }
+    }
+    .choose-brand{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        .all-brands{
+            display: inline-flex;
+            align-items: center;
+            gap: 2.5rem;
+            .brand-name{
+                text-transform: capitalize;
+                list-style: none;
+                font-size: 4rem;
+                opacity: 0.5;
+                transition: all 0.2s ease-in-out;
+                cursor: pointer;
+                &:hover{
+                    opacity: 1;
+                }
+                &.active{
+                    opacity: 1;
+                }
+            }
+        }
+        .select-sorting{
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 2rem;
+            .select-input{
+                position: relative;
+                .sorting{
+                    
+                    padding: 1rem 2.5rem 1rem 1rem;
+                    background-color: $color-gray;
+                    font-size: 2rem;
+                    cursor: pointer;
+                    border: none;
+                    border-radius: 0.5rem;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+            }
+            .price-range{
+                display: flex;
+                flex-direction: column;
+                background-color: $color-gray;
+                border-radius: 1rem;
+                align-items: center;
+                gap: 2rem;
+                padding: 1rem;
+                h1{
+                    font-size: 3rem;
+                    font-weight: 400;
+                }
+                .max-min{
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 1rem;
+                    input[type="number"]{
+                        width: 30%;
+                        appearance: none;
+                        padding: 1rem;
+                        font-size: 2rem;
+                        border: 0;
+                        border-radius: 0.2rem;
+                        &:focus{
+                            outline: 0;
+                        }
+                        &::-webkit-inner-spin-button,
+                        &::-webkit-outer-spin-button{
+                            -webkit-appearance: none;
+                        }
+                    }
+                    p{
+                        border: 0;
+                        background-color: transparent;
+                        font-size: 3rem;
+                    }
+                }
+                .slider{
+                 
+                    height: 0.8rem;
+                    border-radius: 1rem;
+                    background-color: rgb(253, 242, 242);
+                    position: relative;
+                    .progress{
+                        height: 0.8rem;
+                       
+                        position: absolute;
+                        left: 25%;
+                        right: 25%;
+                        border-radius: 1rem;
+                        background: $color-primary;
+                    }
+                }
+                .range-input{
+                    width: 100%;
+                    position: relative;
+
+                    input[type="range"]{
+                        position:absolute;
+                        top: -3.8rem;
+                        height: 0.8rem;
+                        left: 8.8rem;
+                        width: 71%;
+                        -webkit-appearance: none;
+                        background:none ;
+                        pointer-events: none;
+                        &::-webkit-slider-thumb{
+                            -webkit-appearance: none;
+                            height: 2.5rem;
+                            width: 2.5rem;
+                            border-radius: 50%;
+                            background-color: $color-primary;
+                            pointer-events: auto;
+                        }
+                        &::-moz-range-thumb{
+                            -webkit-appearance: none;
+                            height: 2.5rem;
+                            width: 2.5rem;
+                            border-radius: 50%;
+                            background-color: $color-primary;
+                            pointer-events: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .grid{
+        h3{
+            &.not{
+                background-color: $color-primary;
+                color: $color-white;
+                font-weight: 400;
+            }
+        }
+    }
+    .home{
+        background-color: $color-yellow;
+        width:15rem;
+        font-size: 3rem;
+        border-radius: 0.5rem;
+        border: 0;
+        margin: 1rem 1.5rem;
+        height: 6rem;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+        z-index: 0;
+        &::before{
+            content: '';
+            position: absolute;
+            background-color: $color-white;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transform: scaleX(0);
+            transform-origin:right;
+            transition: all 0.3s ease-in-out;
+            border-radius: inherit;
+        }
+        &:hover::before{
+            transform: scaleX(1);
+        }
+    }
+}
+
+
+
+@media (max-width:75em) {
+    .all-mobiles{
+        align-items: center;
+        gap: 3rem;
+        .nav-head{
+            h1{
+                font-size: 3rem;
+                text-align: center;
+            }
+        }
+        .choose-brand{
+            flex-direction: column;
+            gap: 2rem;
+             .all-brands{
+                 display: grid;
+                 grid-template-columns: repeat(5,1fr);
+                 grid-template-rows: auto;
+                 .brand-name{
+                      font-size: 4rem;  
+                 }
+             }
+            .select-sorting{
+                .price-range{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width:56.25em) {
+    .all-mobiles{
+        align-items: center;
+        gap: 3rem;
+        .nav-head{
+            h1{
+                font-size: 3rem;
+                text-align: center;
+            }
+        }
+        .choose-brand{
+            flex-direction: column;
+            gap: 2rem;
+             .all-brands{
+                 display: grid;
+                 grid-template-columns: repeat(4,0.8fr);
+                 grid-template-rows: auto;
+                 .brand-name{
+                      font-size: 4rem;  
+                 }
+             }
+            .select-sorting{
+                .price-range{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:37.5em) {
+    .all-mobiles{
+        align-items: center;
+        gap: 3rem;
+        .nav-head{
+            h1{
+                font-size: 3rem;
+                text-align: center;
+            }
+        }
+        .choose-brand{
+            flex-direction: column;
+            gap: 2rem;
+             .all-brands{
+                 display: grid;
+                 grid-template-columns: repeat(2,0.8fr);
+                 grid-template-rows: auto;
+                 .brand-name{
+                      font-size: 3rem;  
+                 }
+             }
+            .select-sorting{
+                .price-range{
+                    display: none;
+                }
+            }
+        }
+    }
+}

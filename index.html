@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/ddbc1f1755.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,300&family=Kanit:wght@600&family=Roboto:wght@100;300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="/functions/index.js" defer></script>
+    <title>Mob Tronic</title>
+  </head>
+  <body>
+    <!-- overlay -->
+    <div class="layer"></div>
+    <div class="overlay">
+      <button>&#215;</button>
+      <div class="overlay-error">
+        <h1 class="error">error</h1>
+      </div>
+    </div>
+    <header>
+      <h1 class="brand-names"><span>MB</span>Tronics</h1>
+      <div class="search-container desktop">
+        <input type="text" class="search-input" placeholder="Products search" required/>
+        <button class="search-btn">
+          <i class="fas fa-search" style="font-size: 2rem"></i>
+        </button>
+      </div>
+      <div class="mobile">
+        <!-- <button class="search-btn">
+          <i class="fas fa-search" style="font-size: 1.4rem;"></i>
+        </button> -->
+        <a href="#contact" class="scroll">contact </a>
+        <div class="cart-mobile">
+          <p class="cart-para cart mobile-para">0</p>
+          <i class="fas fa-shopping-cart cart-icon mobile-cart"></i>
+        </div>
+      </div>
+      <div class="nav-items">
+       
+
+        <a href="#contact" class="desktop scroll">contact</a>
+        <div class="cart desktop-cart">
+          <p class="cart-para">0</p>
+          <div class="cart-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="60%"
+            height="60%"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-shopping-cart cart-svg"
+          >
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path
+              d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+            ></path>
+          </svg>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="tooltips">
+      <div class="arrow-up"></div>
+       <h2>Items in your cart</h2>
+      <!-- <div class="tooltip">
+        <img src="/img/apip12promax_u_p1.jpg" alt="">
+        <div class="tooltip-products">
+          <p>mobile Phones</p>
+          <p>iphone</p>
+        </div>
+        <h4>$ 1399</h4>
+      </div>  -->
+          
+    </div>
+    
+
+    <main class="intro-page">
+    <section class="slider mobile">
+      <button class="slider-btn left-btn">&#8592</button>
+      <div class="slider-container">
+        <ul class="slider-track">
+          <li class="slide">
+            <img class="slider-img" src="img/slider-1.webp" alt="" />
+          </li>
+          <li class="slide">
+            <img class="slider-img" src="img/slider-2.jpg" alt="" />
+          </li>
+          <li class="slide">
+            <img class="slider-img" src="img/iphone.png" alt="" />
+          </li>
+          <li class="slide">
+            <img class="slider-img" src="img/slider-4.webp" alt="" />
+          </li>
+        </ul>
+      </div>
+      <button class="slider-btn right-btn">&#8594</button>
+      <div class="slider-indicator">
+        <button class="slider-indicator-btn current-active" data-slide="0"></button>
+        <button class="slider-indicator-btn" data-slide="1"></button>
+        <button class="slider-indicator-btn" data-slide="2"></button>
+        <button class="slider-indicator-btn" data-slide="3"></button>
+      </div>
+    </section>
+    <section class="service">
+      <div class="service-card">
+          <h2>intrest-free credit for everything</h2>
+          <img src="/img/intrest free img.jpg" alt="oops!">
+          <div class="icon">
+            <i class="fa fa-calendar fas-icon"></i>
+            <p>14-day return policy</p>
+          </div>
+      </div>
+      <div class="service-card">
+        <h2>smart loan for 24 months</h2>
+        <img src="/img/24.PNG" alt="oops!">
+        <div class="icon">
+          <p class="num1">1</p>
+          <p>best mobile store </p>
+        </div>
+    </div>
+    <div class="service-card">
+      <h2>Delivery</h2>
+      <img src="/img/delivery.jpg" height="75%" alt="oops!">
+      <div class="icon">
+        <i class='fas fa-shipping-fast fas-icon'></i>
+        <p>free delivery </p>
+      </div>
+  </div>
+    </section>
+    <div class="page-2-btn">
+      <button class="view-mobile">
+        view more Mobile &#x2192; 
+      </button>
+      
+    </div>
+     <!-- offer-products -->
+    <section class="offer-products">
+      <h2>Mobiles in offer</h2>
+      <div class="offer-products-grid">
+        <div class="products">
+          <img src="/img/phones/iphoneX.jpg" alt="" />
+          <p>Mobile Phones</p>
+          <h4>Apple</h4>
+          <h4 class="phone-name">iphoneX</h4>
+          <h3 class="offer not">899 $</h3>
+          <button class="add-cart" onclick="addCart(this)">Add to cart</button>
+        </div>
+        <div class="products">
+          <img src="/img/phones/galaxy a5123.webp" alt="" />
+          <p>Mobile Phones</p>
+          <h4>Samsung</h4>
+          <h4 class="phone-name">Galaxy A512</h4>
+          <h3 class="offer not">599 $</h3>
+          <button class="add-cart" onclick="addCart(this)">Add to cart</button>
+        </div>
+        <div class="products">
+          <img src="/img/phones/galaxy s7.webp" alt="" />
+          <p>Mobile Phones</p>
+          <h4>Samsung</h4>
+          <h4 class="phone-name">Galaxy S9</h4>
+          <h3 class="offer not">799 $</h3>
+          <button class="add-cart" onclick="addCart(this)">Add to cart</button>
+        </div>
+        <div class="products">
+          <img src="/img/phones/mi.webp" alt="" />
+          <p>Mobile Phones</p>
+          <h4>Xiaomi</h4>
+          <h4 class="phone-name">Mi 9</h4>
+          <h3 class="offer not">399 $</h3>
+          <button class="add-cart" onclick="addCart(this)">Add to cart</button>
+        </div>
+        <div class="products">
+          <img src="/img/phones/oppo.jpg" alt="" />
+          <p>Mobile Phones</p>
+          <h4>Oppo</h4>
+          <h4 class="phone-name">A73</h4>
+          <h3 class="offer not">299 $</h3>
+          <button class="add-cart" onclick="addCart(this)">Add to cart</button>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+  <main class="all-mobiles" style="display:none;" >
+    <div class="nav-head">
+      <h1>Find your favorite mobile  </h1>
+    </div>
+    <div class="choose-brand">
+      <ul class="all-brands">
+        <li class="brand-name ">apple</li>
+        <li class="brand-name">samsung</li>
+        <li class="brand-name">oppo</li>
+        <li class="brand-name">acer</li>
+        <li class="brand-name">Xiaomi</li>
+        <li class="brand-name">one plus</li>
+        <li class="brand-name">LG</li>
+        <li class="brand-name">Sony</li>
+      </ul>
+      <div class="select-sorting">
+        <div class="select-input">
+          <select name="sorting" class="sorting" id="">
+             <option value="Popular">Popular Products</option>
+             <option value="Popular">Highest Price</option>
+             <option value="Popular">Low Price</option>
+          </select> 
+         
+        </div>
+        <div class="price-range">
+          <h1>Choose your Price</h1>
+          <div class="max-min">
+           <input type="number" class="min" name="" id=""  value="500">
+            <p>-</p>
+            <input type="number" class="max" name="" id="" value="1500">
+          </div>
+          <div class="slider">
+            <div class="progress"></div>
+          </div>
+          <div class="range-input">
+            <input type="range" class="range-min" name="" id="" min="0" max="500" value="100" step="50">
+            <input type="range" class="range-max" name="" id="" min="200" max="1500" value="1200" step="50">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="offer-products-grid grid">
+      <div class="products">
+        <img src="/img/phones/iphoneX.jpg" class="skeleton" alt="" />
+        <p>Mobile Phones</p>
+        <h4>Apple</h4>
+        <h4 class="phone-name">iphone8</h4>
+        <h3 class="offer not">899 $</h3>
+        <button class="add-cart" onclick="addCart(this)">Add to cart</button>
+      </div>
+      <div class="products ">
+        <img src="/img/phones/galaxy a5123.webp" class="skeleton" alt="" />
+        <p>Mobile Phones</p>
+        <h4>Samsung</h4>
+        <h4 class="phone-name">Galaxy A5</h4>
+        <h3 class="offer not">699 $</h3>
+        <button class="add-cart" onclick="addCart(this)">Add to cart</button>
+      </div>
+      <div class="products ">
+        <img src="/img/phones/galaxy s7.webp" class="skeleton" alt="" />
+        <p>Mobile Phones</p>
+        <h4>Samsung</h4>
+        <h4 class="phone-name">Galaxy S8</h4>
+        <h3 class="offer not">799 $</h3>
+        <button class="add-cart" onclick="addCart(this)">Add to cart</button>
+      </div>
+      <div class="products ">
+        <img src="/img/phones/mi.webp" class="skeleton" alt="" />
+        <p>Mobile Phones</p>
+        <h4>Xiaomi</h4>
+        <h4 class="phone-name">Mi 8</h4>
+        <h3 class="offer not">399 $</h3>
+        <button class="add-cart" onclick="addCart(this)">Add to cart</button>
+      </div>
+      <div class="products ">
+        <img src="/img/phones/oppo.jpg" class="skeleton" alt="" />
+        <p>Mobile Phones</p>
+        <h4>Oppo</h4>
+        <h4 class="phone-name">A72</h4>
+        <h3 class="offer not">359 $</h3>
+        <button class="add-cart" onclick="addCart(this)">Add to cart</button>
+      </div>
+    </div>
+    <button class="home">Back</button>
+  </main>
+
+
+  <!-- items in cart -->
+  <main class="cart-item" >
+    <div class="cart-item-container">
+      <h1>Shopping cart </h1>
+       <!-- <div class="cartItem">
+         <img src="/img/apip12promax_u_p1.jpg" alt="">
+         <div class="products">
+           <p class="mobile">Mobile Phones</p>
+           <p class="mobile-name">iphone X</p>
+           <h4><span>$</span>1399 </h4>
+         </div>
+         <div class="btn">
+           <div class="btn-quantity">
+             <button class="negative" onclick="sub(this)"  data-price="1399" >&#x2212;</button>
+             <input class="quantity" type="number" name="" id="" value="1">
+             <button class="add" onclick="add(this)" data-price="1399">&#x2b;</button>
+           </div>
+           <button class="delete" onclick="Delete(this)">&#xd7;</button>
+         </div>
+       </div>  -->      
+
+    
+     </div>
+
+
+     <div class="total-products">
+       <h1>Total <span class="total-products-span">0</span> Products</h1>
+       <div class="total-amount">
+         <p class="total">Total</p>
+         <p class="amount">0 $</p>
+       </div>
+       <button class="order">Place the order</button>
+     </div>
+
+     <div class="nav-btn">
+       <button class="home">Home</button>
+       <button class="go-mobile view-mobile">Go To Mobile</button>
+     </div>
+  </main>
+  <!-- footer -->
+    <footer class="footer">
+      <div class="about-discounts">
+        <i  class='fas'>&#xf02c;</i>
+        <div class="about-discounts-container">
+          <h2>Be the first to know about discounts</h2>
+          <p>special offers and promotions</p>
+        </div>
+        <form class="signup">
+          <input type="email" name="" id="input" placeholder="Your e-mail">
+          <button class="signup-btn" type="submit">sign up <i class="fa fa-envelope"></i></button>
+        </form>
+      </div>
+      <div class="contactus" id="contact">
+         <div class="followus">
+            <i class='fab'>&#xf09a;</i>
+            <i class='fab'>&#xf16d;</i>
+         </div>
+         <div class="contact">
+           <p class="call">66 55 89 00</p>
+           <p class="mail">info@mbtron.com</p>
+         </div>
+      </div>
+      <p class="copyright">online store MB. &copy; 2020  &#x21E4; MB trades &#x21E5;</p>
+    </footer>
+  </body>
+</html>

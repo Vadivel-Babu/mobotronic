@@ -1,0 +1,36 @@
+*,*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+    @media (max-width:37.5em) {  //600px
+      font-size: 50%;
+    }
+
+    @media (max-width:56.25em) { //900px
+      font-size: 51%;
+    }
+    @media (max-width:75em) { //1200px
+      font-size: 50%;
+    }
+
+}
+body{
+    font-family: "Josefin Sans", sans-serif;
+    font-family: "Kanit", sans-serif;
+    font-family: "Roboto", sans-serif;
+    
+    overflow: auto;
+    position: relative;
+}
+button{
+  cursor: pointer;
+}

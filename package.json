@@ -1,0 +1,19 @@
+{
+  "name": "mobtronic",
+  "version": "1.0.0",
+  "description": "online phone site",
+  "default": "index.html",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "lambda-serve":"netlify-lambda serve functions",
+    "lambda-build":"netlify-lambda build functions"
+  },
+  "author": "vadivel",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  },
+  "dependencies": {
+    "netlify-lambda": "^2.0.15"
+  }
+}
