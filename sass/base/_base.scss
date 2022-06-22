@@ -10,17 +10,19 @@
 html{
   font-size: 62.5%;
   scroll-behavior: smooth;
-
+  @media (max-width:112.5em) {
+    font-size: 53%;
+  }
+  @media (max-width:75em) { //1200px
+    font-size: 50%;
+  }
+  @media (max-width:56.25em) { //900px
+    font-size: 51%;
+  }
     @media (max-width:37.5em) {  //600px
       font-size: 50%;
     }
 
-    @media (max-width:56.25em) { //900px
-      font-size: 51%;
-    }
-    @media (max-width:75em) { //1200px
-      font-size: 50%;
-    }
 
 }
 body{

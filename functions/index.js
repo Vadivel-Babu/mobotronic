@@ -350,8 +350,11 @@ document.querySelector('body').addEventListener('click', (e) => {
 // fetch  mobile api
 
 function phones(phone){
-    fetch(` http://api-mobilespecs.azharimm.site/v2/search?query= ${phone}`)
-    .then((response) => response.json())
+    fetch(` https://api-mobilespecs.azharimm.site/v2/search?query= ${phone}`)
+    .then((response) => {
+        if(response.status === 200) return response.json();
+        else throw new Error("Can't get data")
+    })
     .then((data) => {
         let len = data.data.phones.length
         let ren = data.data.phones
@@ -482,3 +485,4 @@ document.querySelector('.signup-btn')
     }
 
 })
+

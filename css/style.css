@@ -7,13 +7,16 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth; }
-  @media (max-width: 37.5em) {
+  @media (max-width: 112.5em) {
+    html {
+      font-size: 53%; } }
+  @media (max-width: 75em) {
     html {
       font-size: 50%; } }
   @media (max-width: 56.25em) {
     html {
       font-size: 51%; } }
-  @media (max-width: 75em) {
+  @media (max-width: 37.5em) {
     html {
       font-size: 50%; } }
 
@@ -304,7 +307,8 @@ header {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    padding: 2rem;
+    height: 7rem;
+    width: 7rem;
     font-size: 3rem;
     border-radius: 50%;
     border: 0;
@@ -400,11 +404,12 @@ header {
     margin-bottom: 8rem; }
     .slider .slider-btn {
       font-size: 3rem;
-      padding: 1rem; }
+      background-color: #fff;
+      color: black; }
       .slider .slider-btn.left-btn {
-        left: -6rem; }
+        left: -8rem; }
       .slider .slider-btn.right-btn {
-        right: -6rem; }
+        right: -8rem; }
   .service {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -418,8 +423,11 @@ header {
     height: 50vh;
     margin-bottom: 8rem; }
     .slider .slider-btn {
+      height: 6rem;
+      width: 6rem;
       font-size: 3rem;
-      padding: 1rem; }
+      background-color: transparent;
+      color: black; }
       .slider .slider-btn.left-btn {
         left: -6rem; }
       .slider .slider-btn.right-btn {
@@ -435,12 +443,15 @@ header {
   .slider {
     height: 40vh; }
     .slider .slider-btn {
+      height: 5rem;
+      width: 5rem;
       font-size: 2rem;
-      padding: 1rem; }
+      background-color: transparent;
+      color: black; }
       .slider .slider-btn.left-btn {
-        left: -5rem; }
+        left: -6rem; }
       .slider .slider-btn.right-btn {
-        right: -5rem; }
+        right: -6rem; }
   .service {
     display: flex;
     flex-direction: column; }
@@ -947,10 +958,12 @@ header {
             width: 2.5rem; }
     .cart-item .total-products {
       position: relative;
-      top: 0; }
+      top: 0;
+      left: 3%; }
     .cart-item .nav-btn {
       position: relative;
       top: 0;
+      left: 3%;
       margin-bottom: 1rem; } }
 
 .all-mobiles {
@@ -984,11 +997,11 @@ header {
     .all-mobiles .choose-brand .all-brands {
       display: inline-flex;
       align-items: center;
-      gap: 2.5rem; }
+      gap: 2rem; }
       .all-mobiles .choose-brand .all-brands .brand-name {
         text-transform: capitalize;
         list-style: none;
-        font-size: 4rem;
+        font-size: 3.5rem;
         opacity: 0.5;
         transition: all 0.2s ease-in-out;
         cursor: pointer; }
@@ -1175,6 +1188,7 @@ header {
   width: 100%;
   z-index: 6;
   height: 100%;
+  top: 0;
   background-color: rgba(0, 0, 0, 0.479); }
 
 .overlay {

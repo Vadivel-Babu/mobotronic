@@ -9,7 +9,8 @@
         position: absolute;
         top:50%;
         transform: translateY(-50%);
-        padding: 2rem;
+        height: 7rem;
+        width: 7rem;
         font-size: 3rem;
         border-radius: 50%;
         border: 0;
@@ -130,12 +131,13 @@
         margin-bottom: 8rem;
         .slider-btn{
             font-size: 3rem;
-            padding: 1rem;
+            background-color:$color-white;
+            color: black;
             &.left-btn{
-                left: -6rem;
+                left: -8rem;
               }
               &.right-btn{
-                right: -6rem;
+                right: -8rem;
               }
         }
     }
@@ -157,8 +159,11 @@
         height: 50vh;
         margin-bottom: 8rem;
         .slider-btn{
+            height: 6rem;
+            width: 6rem;
             font-size: 3rem;
-            padding: 1rem;
+            background-color:transparent;
+            color: black;
             &.left-btn{
                 left: -6rem;
               }
@@ -181,13 +186,16 @@
     .slider{
         height: 40vh;
         .slider-btn{
+            height: 5rem;
+            width: 5rem;
             font-size: 2rem;
-            padding: 1rem;
+            background-color:transparent;
+            color: black;
             &.left-btn{
-                left: -5rem;
+                left: -6rem;
               }
               &.right-btn{
-                right: -5rem;
+                right: -6rem;
               }
         }
     }

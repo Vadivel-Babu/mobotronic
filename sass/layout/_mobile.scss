@@ -35,11 +35,11 @@
         .all-brands{
             display: inline-flex;
             align-items: center;
-            gap: 2.5rem;
+            gap: 2rem;
             .brand-name{
                 text-transform: capitalize;
                 list-style: none;
-                font-size: 4rem;
+                font-size: 3.5rem;
                 opacity: 0.5;
                 transition: all 0.2s ease-in-out;
                 cursor: pointer;
