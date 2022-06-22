@@ -457,6 +457,7 @@ document.querySelector(".order").addEventListener('click', () => {
     
 })
 
+//keep header sticky
 const serv = document.querySelector('.service');
 const ints = serv.getBoundingClientRect()
 const head = document.querySelector('header')
@@ -486,3 +487,128 @@ document.querySelector('.signup-btn')
 
 })
 
+
+//sorting input
+const higher = {
+        brand:"Apple",
+        model:"iphone12",
+        price:1199,
+        img:"/img/phones/iphoneX.jpg"
+        }
+
+const lower = [
+    {
+        brand:"Oppo",
+        model:"A72",
+        price:159,
+        img:"/img/phones/oppo.jpg"
+        },
+        {
+        brand:"Xiaomi",
+        model:"Mi 8",
+        price:199,
+        img:"/img/phones/mi.webp"
+        }
+]
+const populer = [
+    {
+        brand:"Oppo",
+        model:"A72",
+        price:159,
+        img:"/img/phones/oppo.jpg"
+        },
+        {
+        brand:"Xiaomi",
+        model:"Mi8",
+        price:199,
+        img:"/img/phones/mi.webp"
+        },
+        {
+        brand:"Apple",
+        model:"iphone12",
+        price:1199,
+        img:"/img/phones/iphoneX.jpg"
+        },
+        {
+        brand:"Samsung",
+        model:"S9",
+        price:799,
+        img:"/img/phones/s9.jpg"
+        },
+        {
+        brand:"Samsung",
+        model:"S21",
+        price:799,
+        img:"/img/phones/s21.jpg"
+        }
+]
+
+
+
+
+document.querySelector('.sorting')
+.addEventListener('click', (e) => {
+    if(e.target.value === "Higher"){
+        let count = grid.childElementCount
+        if (count !== 0){
+            while (grid.firstChild) {
+                grid.removeChild(grid.firstChild);
+              }
+        }else{
+            console.log('item available')
+        }
+            let html = `<div class="products ">
+                <img src=${higher.img} class="skeleton" alt="" />
+                <p>Mobile Phones</p>
+                <h4>${higher.brand}</h4>
+                <h4 class="phone-name">${higher.model}</h4>
+                <h3 class="offer not">${higher.price} $</h3>
+                <button class="add-cart" onclick="addCart(this)">Add to cart</button>
+              </div>`
+                
+              grid.insertAdjacentHTML("afterbegin", html)
+        
+    }else if(e.target.value === "Lower"){
+        let count = grid.childElementCount
+        if (count !== 0){
+            while (grid.firstChild) {
+                grid.removeChild(grid.firstChild);
+              }
+        }else{
+            console.log('item available')
+        }
+        for(let i =0; i < lower.length; i++){
+            let html = `<div class="products ">
+            <img src=${lower[i].img} class="skeleton" alt="" />
+            <p>Mobile Phones</p>
+            <h4>${lower[i].brand}</h4>
+            <h4 class="phone-name">${lower[i].model}</h4>
+            <h3 class="offer not">${lower[i].price} $</h3>
+            <button class="add-cart" onclick="addCart(this)">Add to cart</button>
+          </div>`
+            
+          grid.insertAdjacentHTML("afterbegin", html)
+        }
+    }else if(e.target.value === "Popular"){
+        let count = grid.childElementCount
+        if (count !== 0){
+            while (grid.firstChild) {
+                grid.removeChild(grid.firstChild);
+              }
+        }else{
+            console.log('item available')
+        }
+        for(let i =0; i < populer.length; i++){
+            let html = `<div class="products ">
+            <img src=${populer[i].img} class="skeleton" alt="" />
+            <p>Mobile Phones</p>
+            <h4>${populer[i].brand}</h4>
+            <h4 class="phone-name">${populer[i].model}</h4>
+            <h3 class="offer not">${populer[i].price} $</h3>
+            <button class="add-cart" onclick="addCart(this)">Add to cart</button>
+          </div>`
+            
+          grid.insertAdjacentHTML("afterbegin", html)
+        }
+    }
+})
